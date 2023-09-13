@@ -1,7 +1,7 @@
-const foo = "hello"
+const foo = "hello";
 
 function hello() {
-    console.log(foo)
+  console.log(foo);
 }
 
-hello()
+hello();
