@@ -13,8 +13,26 @@ _[back to top](#table-of-contents)_
 
 Clone the project
 
-`git clone git@github.com:jav0314/chess-js.git`
+```
+git clone git@github.com:jav0314/chess-js.git
+```
 
 Install the dependencies
 
-`bun install`
+```
+bun install
+```
+
+## Useful commands
+
+Build project on production mode
+
+```
+bun build
+```
+
+Build project on developer mode (watch files)
+
+```
+bun dev
+```
