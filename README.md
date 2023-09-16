@@ -1,2 +1,20 @@
-This is a chess game developed by Julio and Javier
-## This is a readme with useful information
+## Table of Contents
+- [System Requirements](#system-requirements)
+- [Setup](#setup)
+
+## System requirements
+_[back to top](#table-of-contents)_
+
+- [Bun](https://bun.sh/docs)
+- [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) if working on Windows
+
+## Setup
+_[back to top](#table-of-contents)_
+
+Clone the project
+
+`git clone git@github.com:jav0314/chess-js.git`
+
+Install the dependencies
+
+`bun install`
