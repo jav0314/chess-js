@@ -3,3 +3,7 @@
 
 # Modules
 /node_modules
+
+#Lockfiles
+yarn.lock
+package-lock.json
