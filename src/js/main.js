@@ -1,7 +1,6 @@
-const foo = "hello";
+document.getElementById("app")
 
-function hello() {
-  console.log(foo);
-}
+const paragraph = document.createElement("p")
+paragraph.innerHTML = "this is a test message"
 
-hello();
+document.body.appendChild(paragraph)
