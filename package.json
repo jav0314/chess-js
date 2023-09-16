@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "build": "bun build.js"
+    "build": "bun build.js",
+    "dev": "bun build ./src/js/main.js --outdir ./dist/ --watch"
   },
   "dependencies": {
     "eslint": "^8.49.0",
