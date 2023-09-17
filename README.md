@@ -1,6 +1,7 @@
 ## Table of Contents
 - [System Requirements](#system-requirements)
 - [Setup](#setup)
+- [Useful commands](#useful-commands)
 
 ## System requirements
 _[back to top](#table-of-contents)_
@@ -28,11 +29,11 @@ bun install
 Build project on production mode
 
 ```
-bun build
+bun run build
 ```
 
 Build project on developer mode (watch files)
 
 ```
-bun dev
+bun run dev
 ```
