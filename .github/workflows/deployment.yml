@@ -1,0 +1,42 @@
+name: "Deploy App"
+
+on:
+  push:
+    branches:
+      - master
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Download Bun
+        run: curl -fsSL https://bun.sh/install | bash
+
+      - name: Build App
+        run: |
+          bun install
+          bun run build
+
+      - name: Setup Pages
+        uses: actions/configure-oages@v3
+
+      - name: Upload Artifacts
+        uses: actions/upload-pages-artifacts@v2
+        with:
+          path: "./dist"
+
+      - name: Deploy to Github Pages
+        id: Deployment
+        uses: actions/deplo-pages@v2
