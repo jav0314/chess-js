@@ -26,7 +26,7 @@ bun install
 
 ## Useful commands
 
-- [back to top](#table-of-contents)
+_[back to top](#table-of-contents)_
 
 Build project on production mode
 
