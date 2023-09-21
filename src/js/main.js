@@ -1,3 +1,4 @@
+import "./../styles/main.css"
 document.getElementById("app")
 
 const paragraph = document.createElement("p")
