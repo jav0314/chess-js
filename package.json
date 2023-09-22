@@ -1,6 +1,7 @@
 {
   "scripts": {
     "build": "vite build",
+    "build:production": "vite build --base chess-js",
     "dev": "vite --port 5500",
     "preview": "vite preview --port 5500"
   },
