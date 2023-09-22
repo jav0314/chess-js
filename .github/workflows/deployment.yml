@@ -25,8 +25,8 @@ jobs:
         run: |
           curl -fsSL https://bun.sh/install | bash
           source ~/.bashrc
-          bun install
-          bun run build
+          ~/.bun/bin/bun install
+          ~/.bun/bin/bun run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
