@@ -1,13 +1,15 @@
 {
   "scripts": {
-    "build": "bun build.js",
-    "dev": "bun build ./src/js/main.js --outdir ./dist/ --watch"
+    "build": "vite build",
+    "dev": "vite --port 5500",
+    "preview": "vite preview --port 5500"
   },
   "dependencies": {
     "eslint": "^8.49.0",
     "eslint-config-prettier": "^9.0.0",
     "husky": "^8.0.3",
-    "prettier": "^3.0.3"
+    "prettier": "^3.0.3",
+    "vite": "^4.4.9"
   },
   "name": "chess-js"
 }
