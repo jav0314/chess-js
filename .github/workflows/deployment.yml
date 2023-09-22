@@ -30,7 +30,7 @@ jobs:
           bun run build
 
       - name: Setup Pages
-        uses: actions/configure-oages@v3
+        uses: actions/configure-pages@v3
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifacts@v2
