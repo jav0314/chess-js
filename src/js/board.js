@@ -12,9 +12,7 @@ export default class Board {
         square.setAttribute("id", lettersId[column] + row);
         square.setAttribute("class", "square");
 
-        if (isWhite){
-          square.classList.add("white-Square");
-        } else{
+        if (!isWhite){
           square.classList.add("black-Square");
         }
         fragment.append(square);

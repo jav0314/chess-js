@@ -2,18 +2,13 @@
     background: black;
     display: grid;
     grid-template-columns: repeat(8,1fr);
+    border:1px solid black;
     width: 400px;
-    gap: 1px;
-    border: 1px solid black;
 }
 .square{
-    background: blue;
+    background: white;
     height: 50px;
 }
-.white-Square {
-    background: white;
-  }
-  
 .black-Square {
     background: black;
   }
