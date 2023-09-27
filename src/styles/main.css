@@ -1,0 +1,12 @@
+#app{
+    background: black;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    width: 400px;
+    gap: 1px;
+    border: 1px solid black;
+}
+.square{
+    background: blue;
+    height: 50px;
+}
