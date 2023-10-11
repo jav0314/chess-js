@@ -3,6 +3,10 @@ const lettersId = "ABCDEJGH";
 export default class Board {
   init() {
     const app = document.getElementById("app");
+    if (!app){
+      console.error("App wasn't found");
+      return;
+    }
     const fragment = document.createDocumentFragment();
     let isWhite = true;
 
@@ -22,5 +26,6 @@ export default class Board {
     }
 
     app.append(fragment);
+    
   }
 }
