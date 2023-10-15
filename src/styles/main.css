@@ -1,0 +1,15 @@
+#app{
+    background: black;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    border:1px solid black;
+    width: 400px;
+}
+.square{
+    background: white;
+    height: 50px;
+}
+.black-Square {
+    background: black;
+  }
+  
