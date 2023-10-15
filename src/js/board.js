@@ -3,10 +3,7 @@ const lettersId = "ABCDEJGH";
 export default class Board {
   init() {
     const app = document.getElementById("app");
-    if (!app){
-      console.error("App wasn't found");
-      return;
-    }
+    if (!app) throw new Error("App wasn't found")
     const fragment = document.createDocumentFragment();
     let isWhite = true;
 
