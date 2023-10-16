@@ -69,8 +69,8 @@ class Board {
   }
 
   /**
- * @param {number} id 
- */
+   * @param {number} id 
+   */
   getPiece(id) {
     if (!Piece.isValidId(id)) throw new Error("Invalid id")
     /**
@@ -78,6 +78,13 @@ class Board {
      */
     const piece = this.pieces.find((piece) => piece.id === id)
     return piece
+  }
+  /**
+   * @param {number} id 
+   */
+  removePiece(id) {
+    this.pieces = this.pieces.filter((piece) => piece.id !== id)
+    return this
   }
 }
 
