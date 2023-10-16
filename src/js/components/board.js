@@ -43,7 +43,7 @@ class Board {
       }
       isWhite = !isWhite;
     }
-    const piece = PieceFactory.createPiece(piecesTypes.king, { icon: "/piece-placeholder.svg", faction: piecesFaction.white })
+    const piece = PieceFactory.createPiece({ icon: "/piece-placeholder.svg", faction: piecesFaction.white, type: piecesTypes.king })
 
     this.el.append(fragment);
     this.el.append(piece.el)

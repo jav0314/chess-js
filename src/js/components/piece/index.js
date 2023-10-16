@@ -10,6 +10,7 @@ export default class Piece {
     constructor(props) {
         this.faction = props.faction;
         this.el = this.createElement(props.icon);
+        this.type = props.type
     }
 
     createElement(iconUrl) {

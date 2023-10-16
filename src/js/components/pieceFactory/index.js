@@ -2,18 +2,13 @@ import "./../../lib/typeDefinitions"
 import { piecesTypes } from "./../../lib/const"
 import Piece from "../piece";
 
-
-/** 
- * @typedef {typeof piecesTypes[keyof typeof piecesTypes]} PieceTypeValues
- */
-
 export default class PieceFactory {
     /**
      * @param {CommonPieceProps} props
      * @param {PieceTypeValues} type
      */
-    static createPiece(type, props) {
-        switch (type) {
+    static createPiece(props) {
+        switch (props.type) {
             case piecesTypes.king:
                 return new Piece(props);
             default:
