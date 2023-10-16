@@ -20,7 +20,7 @@ export default class Square {
         const el = document.createElement("div");
         el.id = id
         el.classList.add("square");
-        if (!isWhite) el.classList.add("black-Square");
+        if (!isWhite) el.classList.add("square--black");
         return el
     }
 

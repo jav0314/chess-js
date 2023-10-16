@@ -1,0 +1,7 @@
+.square {
+  background: white;
+  height: var(--square-dimensions);
+}
+.square--black {
+  background: black;
+}

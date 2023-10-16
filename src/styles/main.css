@@ -1,16 +1,9 @@
-@import url("./vars.css");
+@import "./vars.css";
+@import "./components/square.css";
 
 #app {
-  background: black;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   border: 1px solid black;
   width: calc(var(--square-dimensions) * 8);
-}
-.square {
-  background: white;
-  height: var(--square-dimensions);
-}
-.black-Square {
-  background: black;
 }
