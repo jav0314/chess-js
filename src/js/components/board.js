@@ -1,5 +1,6 @@
 import { piecesColors, piecesTypes } from "../lib/const";
 import PieceFactory from "./pieceFactory";
+import Square from "./square";
 
 const lettersId = "ABCDEJGH";
 
@@ -22,6 +23,10 @@ class Board {
     }
     this.el = document.getElementById("app");
     Board.instance = this;
+    /**
+     * @type {Square[]} 
+     */
+    this.squares = []
   }
 
   init() {
@@ -31,14 +36,9 @@ class Board {
 
     for (let row = 8; row >= 1; row--) {
       for (let column = 0; column < 8; column++) {
-        const square = document.createElement("div");
-        square.setAttribute("id", lettersId[column] + row);
-        square.setAttribute("class", "square");
-
-        if (!isWhite) {
-          square.classList.add("black-Square");
-        }
-        fragment.append(square);
+        const square = new Square(lettersId[column] + row, isWhite)
+        this.squares.push(square)
+        fragment.append(square.el);
         isWhite = !isWhite;
       }
       isWhite = !isWhite;
