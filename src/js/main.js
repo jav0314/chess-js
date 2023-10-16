@@ -1,5 +1,5 @@
 import "./../styles/main.css"
-import Board from "./board"
+import Board from "./components/board"
 
 Board.init()
 

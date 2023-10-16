@@ -1,3 +1,6 @@
+import { piecesColors } from "../lib/const";
+import Piece from "./piece";
+
 const lettersId = "ABCDEJGH";
 
 class Board {
@@ -40,8 +43,10 @@ class Board {
       }
       isWhite = !isWhite;
     }
+    const piece = new Piece({ icon: "/piece-placeholder.svg", teamSide: piecesColors.white })
 
     this.el.append(fragment);
+    this.el.append(piece.el)
     return this
   }
 }
