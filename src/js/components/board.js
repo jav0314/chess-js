@@ -1,5 +1,5 @@
-import { piecesColors } from "../lib/const";
-import Piece from "./piece";
+import { piecesColors, piecesTypes } from "../lib/const";
+import PieceFactory from "./pieceFactory";
 
 const lettersId = "ABCDEJGH";
 
@@ -43,7 +43,7 @@ class Board {
       }
       isWhite = !isWhite;
     }
-    const piece = new Piece({ icon: "/piece-placeholder.svg", teamSide: piecesColors.white })
+    const piece = PieceFactory.createPiece(piecesTypes.king, { icon: "/piece-placeholder.svg", teamSide: piecesColors.white })
 
     this.el.append(fragment);
     this.el.append(piece.el)
