@@ -1,5 +1,5 @@
 /**
  * @typedef {Object} CommonPieceProps
- * @property {string} teamSide
+ * @property {string} faction
  * @property {string} icon
  */

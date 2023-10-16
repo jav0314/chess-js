@@ -1,4 +1,4 @@
-export const piecesColors = Object.freeze({
+export const piecesFaction = Object.freeze({
     white: "white",
     black: "black"
 })

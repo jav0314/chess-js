@@ -1,4 +1,4 @@
-import { piecesColors, piecesTypes } from "../lib/const";
+import { piecesFaction, piecesTypes } from "../lib/const";
 import PieceFactory from "./pieceFactory";
 import Square from "./square";
 
@@ -43,7 +43,7 @@ class Board {
       }
       isWhite = !isWhite;
     }
-    const piece = PieceFactory.createPiece(piecesTypes.king, { icon: "/piece-placeholder.svg", teamSide: piecesColors.white })
+    const piece = PieceFactory.createPiece(piecesTypes.king, { icon: "/piece-placeholder.svg", faction: piecesFaction.white })
 
     this.el.append(fragment);
     this.el.append(piece.el)

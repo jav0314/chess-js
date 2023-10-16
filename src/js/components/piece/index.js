@@ -8,7 +8,7 @@ export default class Piece {
      * @param {CommonPieceProps} props
      */
     constructor(props) {
-        this.teamSide = props.teamSide;
+        this.faction = props.faction;
         this.el = this.createElement(props.icon);
     }
 
