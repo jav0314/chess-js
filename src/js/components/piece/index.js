@@ -37,6 +37,8 @@ export default class Piece {
         targetSquare.setCurrentPiece(this.id)
     }
 
+    // TODO: check generators compatibility
+    // TODO: maybe move this to its own helper???
     static idGenerator = (function* () {
         let id = initialPiecesId;
         while (true) yield id++;
