@@ -1,7 +1,7 @@
-import { piecesFaction, piecesTypes, lettersId } from "../lib/const";
-import Piece from "./piece";
-import PieceFactory from "./pieceFactory";
-import Square from "./square";
+import { piecesFaction, piecesTypes, lettersId } from "../../lib/const";
+import Piece from "../piece";
+import PieceFactory from "../pieceFactory";
+import Square from "../square";
 
 class Board {
   /**
