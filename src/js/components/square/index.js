@@ -28,6 +28,7 @@ export default class Square {
      * @param {string} id 
      */
     static isValidId(id) {
+        if (typeof id !== "string") return false
         const [letter, number] = id.split("")
         const isValidLetter = lettersId.split("").includes(letter)
         const parsedNumber = Number(number)
