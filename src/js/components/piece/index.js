@@ -1,5 +1,6 @@
 import { initialPiecesId } from "../../lib/const";
-import "./../../lib/typeDefinitions"
+import { genAutoIncreasingId } from "../../lib/helpers";
+import "../../lib/typeDefinitions"
 import Board from "./../board"
 
 export default class Piece {
@@ -32,12 +33,7 @@ export default class Piece {
         targetSquare.setCurrentPiece(this.id)
     }
 
-    // TODO: check generators compatibility
-    // TODO: maybe move this to its own helper???
-    static idGenerator = (function* () {
-        let id = initialPiecesId;
-        while (true) yield id++;
-    })();
+    static idGenerator = genAutoIncreasingId(initialPiecesId);
 
     /**
      * @param {number} id 
