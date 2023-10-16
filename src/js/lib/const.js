@@ -11,3 +11,7 @@ export const piecesTypes = Object.freeze({
     rook: 4,
     pawn: 5
 })
+
+export const lettersId = "ABCDEJGH";
+
+export const initialPiecesId = 1

@@ -12,7 +12,7 @@ export default class PieceFactory {
             case piecesTypes.king:
                 return new Piece(props);
             default:
-                return new Piece(props)
+                throw new Error(`Unsupported piece. ${props.type} is not a valid piece`)
             // TODO: implement real pieces classes, not base one
         }
     }

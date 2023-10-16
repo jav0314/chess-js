@@ -1,8 +1,7 @@
-import { piecesFaction, piecesTypes } from "../lib/const";
+import { piecesFaction, piecesTypes, lettersId } from "../lib/const";
+import Piece from "./piece";
 import PieceFactory from "./pieceFactory";
 import Square from "./square";
-
-const lettersId = "ABCDEJGH";
 
 class Board {
   /**
@@ -23,10 +22,16 @@ class Board {
     }
     this.el = document.getElementById("app");
     Board.instance = this;
+
     /**
      * @type {Square[]} 
      */
     this.squares = []
+
+    /**
+     * @type {Piece[]} 
+     */
+    this.pieces = []
   }
 
   init() {
@@ -44,10 +49,35 @@ class Board {
       isWhite = !isWhite;
     }
     const piece = PieceFactory.createPiece({ icon: "/piece-placeholder.svg", faction: piecesFaction.white, type: piecesTypes.king })
+    this.pieces.push(piece)
 
     this.el.append(fragment);
     this.el.append(piece.el)
+    console.log(this.pieces, this.squares)
     return this
+  }
+  /**
+   * @param {Square["id"]} id 
+   */
+  getSquare(id) {
+    if (!Square.isValidId(id)) throw new Error("Invalid id")
+    /**
+     * @type {Square}
+     */
+    const square = this.squares.find((square) => square.id === id)
+    return square
+  }
+
+  /**
+ * @param {number} id 
+ */
+  getPiece(id) {
+    if (!Piece.isValidId(id)) throw new Error("Invalid id")
+    /**
+     * @type {Piece}
+     */
+    const piece = this.pieces.find((piece) => piece.id === id)
+    return piece
   }
 }
 
