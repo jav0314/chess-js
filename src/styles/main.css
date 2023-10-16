@@ -1,5 +1,6 @@
 @import "./vars.css";
 @import "./components/square.css";
+@import "./components/piece.css";
 
 #app {
   display: grid;

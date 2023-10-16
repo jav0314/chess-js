@@ -16,16 +16,11 @@ export default class Piece {
 
     createElement(iconUrl) {
         const el = document.createElement("button");
+        el.classList.add("piece")
         const icon = document.createElement("img");
+        icon.classList.add("piece__icon")
         icon.setAttribute("src", iconUrl);
-        icon.style.width = "50px"
-        icon.style.height = "50px"
         el.append(icon);
-        el.style.position = "absolute";
-        el.style.zIndex = "50";
-        el.style.width = "50px"
-        el.style.height = "50px"
-        el.style.padding = "0"
         return el;
     }
     /**
