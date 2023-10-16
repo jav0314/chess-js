@@ -1,9 +1,28 @@
 const lettersId = "ABCDEJGH";
 
-export default class Board {
+class Board {
+  /**
+   * @type {null | Board}
+   */
+  static instance = null;
+
+  static getInstance() {
+    if (!Board.instance) {
+      Board.instance = new Board();
+    }
+    return Board.instance;
+  }
+
+  constructor() {
+    if (Board.instance) {
+      return Board.instance;
+    }
+    this.el = document.getElementById("app");
+    Board.instance = this;
+  }
+
   init() {
-    const app = document.getElementById("app");
-    if (!app) throw new Error("App wasn't found")
+    if (!this.el) throw new Error("App wasn't found");
     const fragment = document.createDocumentFragment();
     let isWhite = true;
 
@@ -13,7 +32,7 @@ export default class Board {
         square.setAttribute("id", lettersId[column] + row);
         square.setAttribute("class", "square");
 
-        if (!isWhite){
+        if (!isWhite) {
           square.classList.add("black-Square");
         }
         fragment.append(square);
@@ -22,7 +41,11 @@ export default class Board {
       isWhite = !isWhite;
     }
 
-    app.append(fragment);
-    
+    this.el.append(fragment);
+    return this
   }
 }
+
+const board = Board.getInstance()
+
+export default board
