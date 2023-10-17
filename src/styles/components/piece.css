@@ -1,0 +1,14 @@
+.piece {
+  width: var(--square-dimensions);
+  height: var(--square-dimensions);
+  position: absolute;
+  z-index: 50;
+  padding: 0;
+}
+
+.piece__icon {
+  width: var(--square-dimensions);
+  height: var(--square-dimensions);
+  object-fit: contain;
+  object-position: center;
+}

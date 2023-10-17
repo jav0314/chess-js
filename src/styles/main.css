@@ -1,15 +1,10 @@
-#app{
-    background: black;
-    display: grid;
-    grid-template-columns: repeat(8,1fr);
-    border:1px solid black;
-    width: 400px;
+@import "./vars.css";
+@import "./components/square.css";
+@import "./components/piece.css";
+
+#app {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  border: 1px solid black;
+  width: calc(var(--square-dimensions) * 8);
 }
-.square{
-    background: white;
-    height: 50px;
-}
-.black-Square {
-    background: black;
-  }
-  
