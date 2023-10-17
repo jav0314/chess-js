@@ -1,4 +1,4 @@
-import { piecesFaction, piecesTypes, lettersId } from "../../lib/const";
+import { lettersId,piecesInitialPosition } from "../../lib/const";
 import Piece from "../piece";
 import PieceFactory from "../pieceFactory";
 import Square from "../square";
@@ -41,19 +41,21 @@ class Board {
 
     for (let row = 8; row >= 1; row--) {
       for (let column = 0; column < 8; column++) {
-        const square = new Square(lettersId[column] + row, isWhite)
+        const id = lettersId[column] + row
+        const square = new Square(id, isWhite)
+        const foundSquare = piecesInitialPosition.find(({ squareId }) => squareId === id)
+        if (foundSquare) {
+          const piece = PieceFactory.createPiece({ type: foundSquare.pieceType, faction: foundSquare.faction, icon: "/piece-placeholder.svg" })
+          square.el.append(piece.el)
+          this.pieces.push(piece)
+        }
         this.squares.push(square)
         fragment.append(square.el);
         isWhite = !isWhite;
       }
       isWhite = !isWhite;
     }
-    const piece = PieceFactory.createPiece({ icon: "/piece-placeholder.svg", faction: piecesFaction.white, type: piecesTypes.king })
-    this.pieces.push(piece)
-
     this.el.append(fragment);
-    this.el.append(piece.el)
-    console.log(this.pieces, this.squares)
     return this
   }
   /**
