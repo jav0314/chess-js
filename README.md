@@ -6,7 +6,8 @@
 ## System requirements
 _[back to top](#table-of-contents)_
 
-- [Bun](https://bun.sh/docs)
+- [node](https://nodejs.org/es): v18.18.0
+- npm
 - [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) if working on Windows
 
 ## Setup
@@ -21,7 +22,7 @@ git clone git@github.com:jav0314/chess-js.git
 Install the dependencies
 
 ```
-bun install
+npm i
 ```
 
 ## Useful commands
@@ -31,11 +32,11 @@ _[back to top](#table-of-contents)_
 Build project on production mode
 
 ```
-bun run build
+npm run build
 ```
 
 Build project on developer mode (watch files)
 
 ```
-bun run dev
+npm run dev
 ```
