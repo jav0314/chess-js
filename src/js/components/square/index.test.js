@@ -17,6 +17,8 @@ describe("Square", () => {
             expect(Square.isValidId("1A")).toBe(false)
             expect(Square.isValidId("K1")).toBe(false)
             expect(Square.isValidId("A9")).toBe(false)
+            expect(Square.isValidId("A81")).toBe(false)
+            expect(Square.isValidId("A")).toBe(false)
         })
 
         it("should return true when id is formatted properly", () => {
