@@ -1,4 +1,5 @@
 import { lettersId } from "../../lib/const";
+import { InvalidIdentifierError } from "../../lib/errors";
 import Board from "../board";
 export default class Square {
     /**
@@ -16,7 +17,7 @@ export default class Square {
      * @param {boolean} isWhite 
      */
     createElement(id, isWhite) {
-        if (!Square.isValidId(id)) throw new Error("Invalid id")
+        if (!Square.isValidId(id)) throw new InvalidIdentifierError(`${id} is not a valid id for Square instance`)
         const el = document.createElement("div");
         el.id = id
         el.classList.add("square");
