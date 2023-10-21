@@ -1,6 +1,7 @@
 @import "./vars.css";
 @import "./components/square.css";
 @import "./components/piece.css";
+@import "normalize.css";
 
 #app {
   display: grid;
