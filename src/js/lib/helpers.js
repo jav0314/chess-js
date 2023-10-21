@@ -1,3 +1,3 @@
 export function* genAutoIncreasingId(base) {
-    while (true) yield base++;
+  while (true) yield base++;
 }

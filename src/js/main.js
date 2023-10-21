@@ -1,4 +1,4 @@
-import "./../styles/main.css"
-import Board from "./components/board"
+import "./../styles/main.css";
+import Board from "./components/board";
 
-Board.init()
+Board.init();
