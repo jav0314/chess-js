@@ -5,7 +5,8 @@
     "dev": "vite --port 5500",
     "preview": "vite preview --port 5500",
     "test": "node --experimental-vm-modules ./node_modules/.bin/jest",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "eslint": "^8.49.0",
