@@ -25,6 +25,7 @@ export default class Piece {
         return el;
     }
     /**
+     * TODO: implement this logic
      * @param {string} squareId 
      */
     move(squareId) {
