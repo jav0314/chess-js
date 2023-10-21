@@ -7,8 +7,15 @@ export default class Square {
      */
     constructor(id, isWhite) {
         this.el = this.createElement(id, isWhite)
+        /**
+         * @type {string}
+         */
         this.id = id
         this.currentPiece = null
+        /**
+         * @type {DOMRect}
+         */
+        this.position = this.el.getBoundingClientRect()
     }
 
     /**
@@ -34,10 +41,6 @@ export default class Square {
         const parsedNumber = Number(number)
         const isValidNumber = !Number.isNaN(parsedNumber) && parsedNumber > 0 && parsedNumber < 9
         return id.length === 2 && isValidLetter && isValidNumber
-    }
-
-    getCurrentPiece() {
-        return this.currentPiece
     }
 
     setCurrentPiece(id) {
