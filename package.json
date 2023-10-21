@@ -3,7 +3,8 @@
     "build": "vite build",
     "build:production": "vite build --base chess-js",
     "dev": "vite --port 5500",
-    "preview": "vite preview --port 5500"
+    "preview": "vite preview --port 5500",
+    "test": "node --experimental-vm-modules ./node_modules/.bin/jest"
   },
   "dependencies": {
     "eslint": "^8.49.0",
@@ -15,6 +16,8 @@
   },
   "name": "chess-js",
   "devDependencies": {
-    "jest": "^29.7.0"
-  }
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  },
+  "type": "module"
 }
