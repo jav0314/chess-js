@@ -1,4 +1,4 @@
-import { lettersId,piecesInitialPosition } from "../../lib/const";
+import { lettersId, piecesInitialPosition } from "../../lib/const";
 import Piece from "../piece";
 import PieceFactory from "../pieceFactory";
 import Square from "../square";
@@ -24,14 +24,14 @@ class Board {
     Board.instance = this;
 
     /**
-     * @type {Square[]} 
+     * @type {Square[]}
      */
-    this.squares = []
+    this.squares = [];
 
     /**
-     * @type {Piece[]} 
+     * @type {Piece[]}
      */
-    this.pieces = []
+    this.pieces = [];
   }
 
   init() {
@@ -41,55 +41,61 @@ class Board {
 
     for (let row = 8; row >= 1; row--) {
       for (let column = 0; column < 8; column++) {
-        const id = lettersId[column] + row
-        const square = new Square(id, isWhite)
-        const foundSquare = piecesInitialPosition.find(({ squareId }) => squareId === id)
+        const id = lettersId[column] + row;
+        const square = new Square(id, isWhite);
+        const foundSquare = piecesInitialPosition.find(
+          ({ squareId }) => squareId === id,
+        );
         if (foundSquare) {
-          const piece = PieceFactory.createPiece({ type: foundSquare.pieceType, faction: foundSquare.faction, icon: "/piece-placeholder.svg" })
-          square.el.append(piece.el)
-          this.pieces.push(piece)
+          const piece = PieceFactory.createPiece({
+            type: foundSquare.pieceType,
+            faction: foundSquare.faction,
+            icon: "/piece-placeholder.svg",
+          });
+          square.el.append(piece.el);
+          this.pieces.push(piece);
         }
-        this.squares.push(square)
+        this.squares.push(square);
         fragment.append(square.el);
         isWhite = !isWhite;
       }
       isWhite = !isWhite;
     }
     this.el.append(fragment);
-    return this
+    return this;
   }
   /**
-   * @param {Square["id"]} id 
+   * @param {Square["id"]} id
    */
   getSquare(id) {
-    if (!Square.isValidId(id)) throw new Error("Invalid id")
+    if (!Square.isValidId(id)) throw new Error("Invalid id");
     /**
      * @type {Square}
      */
-    const square = this.squares.find((square) => square.id === id)
-    return square
+    const square = this.squares.find((square) => square.id === id);
+    return square;
   }
 
   /**
-   * @param {number} id 
+   * @param {number} id
    */
   getPiece(id) {
-    if (!Piece.isValidId(id)) throw new Error("Invalid id")
+    if (!Piece.isValidId(id)) throw new Error("Invalid id");
     /**
      * @type {Piece}
      */
-    const piece = this.pieces.find((piece) => piece.id === id)
-    return piece
+    const piece = this.pieces.find((piece) => piece.id === id);
+    return piece;
   }
   /**
-   * @param {number} id 
+   * @param {number} id
    */
   removePiece(id) {
-    this.pieces = this.pieces.filter((piece) => piece.id !== id)
-    return this
+    this.pieces = this.pieces.filter((piece) => piece.id !== id);
+    return this;
   }
 }
 
-const board = Board.getInstance()
+const board = Board.getInstance();
 
-export default board
+export default board;
