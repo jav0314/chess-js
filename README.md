@@ -43,3 +43,7 @@ Build project on developer mode (watch files)
 ```
 npm run dev
 ```
+
+## Further Reading
+
+- CSS Style Guide
