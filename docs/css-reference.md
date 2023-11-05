@@ -6,11 +6,9 @@ To offer a reference guide detailing the patterns, conventions, and all pertinen
 
 1. [Methodology](#methodology)
 2. [Conventions](#conventions)
-
-- [Variables](#variables)
-- [Units](#units)
-- [Modular Stylings](#modular-stylings)
-
+   - [Variables](#variables)
+   - [Units](#units)
+   - [Modular Stylings](#modular-stylings)
 3. [Normalize.css](#normalizecss)
 
 ## Methodology
@@ -33,7 +31,7 @@ To convert `px` to `rem`, use the formula: `px/16 = rem`. For example, `32px` is
 
 ### Modular stylings
 
-New ui stylings should be added to a new `.css` file inside the `styles/components/` folder, then imported to the `main.css`. If your new styling is something more global add it to the `styles/` root.
+New UI styles should be added to a new `.css` file inside the `styles/components/` folder, then imported to the `main.css`. If your new styling is something more global add it to the `styles/` root.
 
 This ensures our code is searchable and organized.
 
