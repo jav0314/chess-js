@@ -20,6 +20,12 @@ You should always use `rem` when working with properties like padding or margins
 
 To convert `px` to `rem`, use the formula: `px/16 = rem`. For example, `32px` is `2rem`.
 
+### Modular stylings
+
+New ui stylings should be added to a new .css file inside the `styles/components/` folder, then imported to the `main.css`. If your new styling is something more global add it to the `styles/` root.
+
+This ensures our code is searchable and organized.
+
 ## Normalize.css
 
 This is an external package for browser resets. Never update it directly since lead to inconsistencies and issues when the package is later upgraded via `npm`.
