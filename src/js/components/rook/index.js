@@ -1,9 +1,9 @@
-import Board from "./../board";
+import Board from "../board";
+import Piece from "../piece";
 
-export class Rook {
-  constructor(color, currentPosition) {
-    this.color = color;
-    this.currentPosition = currentPosition;
+export class Rook extends Piece {
+  constructor(props) {
+    super(props);
   }
 
   isValidMove(newPosition) {
@@ -37,5 +37,5 @@ function pathClear(currentSquare, newSquare, squareIds) {
       if (squareOccupied(squareId)) return false;
     }
   }
-  return true;
+  return;
 }
