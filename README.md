@@ -43,3 +43,7 @@ Build project on developer mode (watch files)
 ```
 npm run dev
 ```
+
+## Further Reading
+
+- [CSS Style Guide](https://github.com/jav0314/chess-js/blob/main/docs/css-reference.md)

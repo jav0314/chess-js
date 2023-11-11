@@ -2,10 +2,4 @@
 @import "./vars.css";
 @import "./components/square.css";
 @import "./components/piece.css";
-
-#app {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  border: 1px solid black;
-  width: calc(var(--square-dimensions) * 8);
-}
+@import "./components/board.css";
